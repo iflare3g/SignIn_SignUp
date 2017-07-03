@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600'>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/reset_pwd.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+
+
+  </head>
+  <body>
+      <div class="container">
+      <div class="row">
+          <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+    		  <form id="form "role="form" class="sign_up_form" action='/forgot' method='POST'>
+    			  <h2 class="sign_up_title">Aggiorna la tua password</h2>
+    			 <div class="form-group">
+    				  <input type="text" name="email" id="email" class="form-control input-lg" placeholder="La tua email..." tabindex="4">
+    			  </div>
+    			  <div class="form-group">
+    				  <input type="password" name="pwd" id="pwd" class="form-control input-lg" placeholder="Nuova password..." tabindex="4" required>
+    			  </div>
+    			  <div class="row">
+    				  <div class="col-xs-12 col-md-12"><input type="submit" onclick="crypt()" class="btn btn-success btn-block btn-lg" value="Aggiorna password"></div>
+    			  </div>
+    			   <div class="row">
+    				  <div class="col-xs-12 col-md-12" id='back_home'><center><a href='/'> Back to Home <i class="fa fa-home" aria-hidden="true"></i></a></center></div>
+    			  </div>
+    		  </form>
+    	  </div>
+      </div>
+    </div>
+  <!-- JINJA2 -->
+ {% if msg %}
+      <div class="alert alert-success" role="alert">
+        <center><strong>Ben fatto!</strong> {{msg}} <a href="/" class="alert-link">Loggati qui</a></center>
+      </div>
+ {% endif %}   
+ 
+ 
+ 
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/md5.min.js"></script>
+    <script src="../static/js/jquery.validate.js"></script>
+    <script src="../static/js/additional-methods.js"></script>
+    <script src="../static/js/reset.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    
+
+
+  </body>
+</html>

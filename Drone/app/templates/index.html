@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Drone</title>
+  
+      <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600'>
+      <link rel="stylesheet" href="../static/css/style.css">
+      <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+
+  
+</head>
+
+<body>
+  <div class="cont_principal">
+
+  <div class="cont_centrar">
+    <h1 align='center'>Drone</h1>
+  <div class="cont_login">
+    <form action="/" method='POST' id='form'>
+    <div class="cont_tabs_login">
+      <ul class='ul_tabs'>
+        <li class="active"><a href="#in" onclick="sign_in()">SIGN IN</a>
+        <span class="linea_bajo_nom"></span>
+        </li>
+        <li><a href="#up" onclick="sign_up()">SIGN UP</a><span class="linea_bajo_nom"></span>
+        </li>
+      </ul>
+      </div>
+  <div class="cont_text_inputs">
+    <div>
+      <input type="text" id='name' class="input_form_sign " placeholder="NAME" name="nome"/>
+    </div>
+    <div>
+      <input type="text" id='surname' class="input_form_sign " placeholder="SURNAME" name="cognome"/>
+    </div>
+    <div>
+      <input type="text" id='email' class="input_form_sign d_block active_inp" placeholder="EMAIL" name="email"/>
+    </div>
+
+    <div>
+      <input type="password" id='pwd' class="input_form_sign d_block  active_inp" placeholder="PASSWORD" name="pwd_in" />
+    </div>
+    <div>
+      <input type="password" id='conf_pwd' class="input_form_sign" placeholder="CONFIRM PASSWORD" name="conf_pwd" />
+    </div>
+    
+    <a href="/forgot" class="link_forgot_pass d_block" >Forgot Password ?</a>
+<div class="terms_and_cons d_none">
+    <p><input type="checkbox" name="terms_and_cons" /> <label for="terms_and_cons">Accept  Terms and Conditions.</label></p>
+  
+    </div>
+      </div>
+<div class="cont_btn">
+     <button class="btn_sign" onclick="crypt_in()">SIGN IN</button>
+      
+      </div>
+      
+    </form>
+    </div>
+    
+  </div>
+  
+  </div>
+  
+    <!-- script including -->
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/index.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/jquery.validate.js"></script>
+    <script src="../static/js/additional-methods.js"></script>
+    <script src="../static/js/check-fields.js"></script>
+    <script src="../static/js/md5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    
+    <!-- Jinja Templates -->
+    % if msg  %
+      <script>
+      var msg = "{{msg}}";
+      if(msg != ""){
+        toastr.options = {positionClass:"toast-top-full-width"};
+        toastr.error(msg);
+      }
+      </script>
+    % endif %
+  
+
+  </body>
+</html>
