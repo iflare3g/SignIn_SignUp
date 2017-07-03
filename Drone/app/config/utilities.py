@@ -19,7 +19,6 @@ def connect():
     db = None
     try:
         db = mysql.connect(user=access_data.get('user'),password=access_data.get('password'), db=access_data.get('db'), host=access_data.get('host'),cursorclass=pymysql.cursors.DictCursor)
-        #print("Connected!")
     except:
         print('error no connection')
     return db
@@ -79,8 +78,6 @@ def safety_get_query(connection,query_to_do,args):
         else:
             print("Is MySQL Server running ?")
             return "Is MySQL Server running ?"
-           
-        #print('connection closed!')
     return res
     
     
@@ -114,8 +111,8 @@ def is_not_empty(my_string):
 def is_empty(items):
     if type(items) is list:
         for string in items:
-            return not bool(string)
+            return not bool(string and string.strip()) 
     else:
-        return not bool(string)
+        return not bool(items and items.strip())
         
     
