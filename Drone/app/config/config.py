@@ -1,1 +1,1 @@
-access_data = {'user':'root', 'password':'', 'db':'drone', 'host':'127.0.0.1'}
+access_data = {'user':'YOUR_USER', 'password':'YOUR_PWD', 'db':'YOUR_DB', 'host':'YOUR_HOST_ADDRESS'}
