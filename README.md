@@ -12,3 +12,8 @@ It's a simple and basic project used to learn more about Flask microframework an
 Some part of code are not written in the best pythonic way, but I like Python and I'm studying it to improve my coding skills.
 
 The forgot password is working but it's a test, because that way isn't the right one as if I knew your email, I would change your password and logging into your account.  
+
+Requirements : 
+		Flask;
+		Flask-CORS;
+		pymysql;
