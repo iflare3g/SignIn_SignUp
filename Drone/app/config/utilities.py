@@ -121,3 +121,15 @@ def safety_update_query(connection,query_to_do,data_to_be_inserted):
             print("Is MySQL Server running ?")
             return "Is MySQL Server running ?"
     return error
+    
+def is_not_empty(my_string):
+    return bool(my_string and my_string.strip())
+    
+def is_empty(items):
+    if type(items) is list:
+        for string in items:
+            return not bool(string)
+    else:
+        return not bool(string)
+        
+    
