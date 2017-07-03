@@ -8,26 +8,12 @@ def random_pwd():
     chars = string.ascii_uppercase + string.ascii_lowercase + string.digits
     size = 4
     return ''.join(random.choice(chars) for i in range(size,10))
-  
-def parse_utc_utd(response):
-    for row in response:
-        row['UTC'] = str(row['UTC'])
-        row['UTD'] = str(row['UTD'])
-    return response
 
 def return_md5_pwd(pwd):
     md5_pwd = hashlib.md5()
     md5_pwd.update(pwd.encode('utf-8'))
     hashed_pwd = md5_pwd.hexdigest()[0:10]
     return hashed_pwd
-
-def parse_post_data(data,date_time):
-    date = date_time.strftime('%Y%m%d')
-    hour = date_time.strftime('%H%M%S')
-    correct_data = date + ';' + hour + ';'
-    correct_data += str(data)
-    data_to_be_inserted = correct_data.split(';')
-    return data_to_be_inserted
 
 def connect():
     db = None
