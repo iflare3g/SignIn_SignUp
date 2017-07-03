@@ -2,7 +2,7 @@
 
 Registration-Login system
 
-This small and rookie project is being developed on Cloud9 IDE. HTML Templates are powered by Bootstrap 3. 
+This small and rookie project has been developed on Cloud9 IDE. HTML Templates are powered by Bootstrap 3. 
 The Python version used is the third one.
 
 After installing all modules, by executing run.py, the server goes on. 
