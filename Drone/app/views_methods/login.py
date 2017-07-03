@@ -23,7 +23,7 @@ def login():
     conf_pwd = request.form.get('conf_pwd',None)
     
     
-    if email != '' and nome == '' and cognome == '' and conf_pwd == '' :
+    if is_not_empty(email) and is_empty([nome,cognome,conf_pwd]):
       res = valid_login(email,pwd_login)
       print('login')
       
